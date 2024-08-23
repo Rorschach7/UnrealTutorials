@@ -3,7 +3,7 @@
 
 #include "Tutorials/Public/Widgets/MainMenuWidget.h"
 
-#include "CommonButtonBase.h"
+#include "Widgets/CustomButton.h"
 
 void UMainMenuWidget::NativeOnInitialized() {
 	Super::NativeOnInitialized();

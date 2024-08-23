@@ -7,7 +7,7 @@
 
 #include "MainMenuWidget.generated.h"
 
-class UCommonButtonBase;
+class UCustomButton;
 
 UCLASS()
 class TUTORIALS_API UMainMenuWidget : public UCommonUserWidget {
@@ -15,13 +15,13 @@ class TUTORIALS_API UMainMenuWidget : public UCommonUserWidget {
 
 protected:
     UPROPERTY(meta = (BindWidget))
-    UCommonButtonBase* NewGameBtn;
+    UCustomButton* NewGameBtn;
     UPROPERTY(meta = (BindWidget))
-    UCommonButtonBase* SettingsBtn;
+    UCustomButton* SettingsBtn;
     UPROPERTY(meta = (BindWidget))
-    UCommonButtonBase* CreditsBtn;
+    UCustomButton* CreditsBtn;
     UPROPERTY(meta = (BindWidget))
-    UCommonButtonBase* QuitBtn;
+    UCustomButton* QuitBtn;
 
     virtual void NativeOnInitialized() override;
 
