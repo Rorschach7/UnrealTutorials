@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "CommonButtonBase.h"
 #include "CommonUserWidget.h"
 
 #include "MainMenuWidget.generated.h"
@@ -23,10 +24,15 @@ protected:
     UPROPERTY(meta = (BindWidget))
     UCustomButton* QuitBtn;
 
-    virtual void NativeOnInitialized() override;
+    UPROPERTY(EditAnywhere, Category = "Main Menu")
+    TSoftObjectPtr<UWorld> NewGameLevel;
+
+    virtual void NativeOnInitialized() override;    
 
     virtual void OnNewGame();
     virtual void OnSettings();
     virtual void OnCredits();
-    virtual void OnQuit();    
+    virtual void OnQuit();
+    
+    virtual void OnInputMethodChanged(ECommonInputType NewInputType);
 };
