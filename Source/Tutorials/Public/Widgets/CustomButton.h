@@ -11,7 +11,7 @@ class UCommonTextBlock;
 /**
  * 
  */
-UCLASS()
+UCLASS(Abstract)
 class TUTORIALS_API UCustomButton : public UCommonButtonBase {
     GENERATED_BODY()
 
@@ -24,5 +24,9 @@ protected:
     FText ButtonText;
 
     virtual void NativePreConstruct() override;
+
+public:
+
+    virtual void SetButtonText(const FText& InText);
     
 };

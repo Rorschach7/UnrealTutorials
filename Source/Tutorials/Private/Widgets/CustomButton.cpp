@@ -6,6 +6,11 @@
 
 void UCustomButton::NativePreConstruct() {
     Super::NativePreConstruct();
+    
+    ButtonTextBlock->SetText(ButtonText);
+}
 
+void UCustomButton::SetButtonText(const FText& InText) {
+    ButtonText = InText;
     ButtonTextBlock->SetText(ButtonText);
 }
